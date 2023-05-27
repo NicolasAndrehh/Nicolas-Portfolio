@@ -13,25 +13,25 @@ const Header = () => (
       <ul className="nav-links">
         <li className="nav-item">
           <NavLink to="/" activeClassName="active" end>
-            <FontAwesomeIcon icon={faHouse} />
+            <FontAwesomeIcon icon={faHouse} className="icon" />
             Home
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink to="/about" activeClassName="active">
-            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faUser} className="icon" />
             About
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink to="/projects" activeClassName="active">
-            <FontAwesomeIcon icon={faBriefcase} />
+            <FontAwesomeIcon icon={faBriefcase} className="icon" />
             Projects
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink to="/contact" activeClassName="active">
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faEnvelope} className="icon" />
             Contact
           </NavLink>
         </li>
