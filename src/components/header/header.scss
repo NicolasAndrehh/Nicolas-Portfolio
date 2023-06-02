@@ -1,11 +1,19 @@
 $color-primary: #e65f78;
 
+.scrolled {
+  box-shadow: 0 0 15px 1px $color-primary;
+  position: fixed;
+  z-index: 1;
+}
+
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 4rem;
   background-color: #000;
+  transition: all 0.4s ease-in-out;
 
   h1 {
     color: #fff;
