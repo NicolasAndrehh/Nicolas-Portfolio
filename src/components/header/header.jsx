@@ -13,7 +13,6 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const position = window.pageYOffset;
-      console.log(position, scrolled);
       if (position > 10) {
         setScrolled(true);
       } else {
