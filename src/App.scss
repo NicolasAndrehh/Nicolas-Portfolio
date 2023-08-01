@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+$color-primary: #e65f78;
+
 body {
   font-family: 'Lato', sans-serif;
   background-color: #000;
@@ -7,4 +9,10 @@ body {
 
 main {
   padding: 2rem;
+}
+
+.separator {
+  width: 80vw;
+  border: 1px solid $color-primary;
+  box-shadow: 0 0 10px 2px $color-primary;
 }

@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
-import Home from './components/home/home';
+import About from './components/about/about';
 import Header from './components/header/header';
+import Home from './components/home/home';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Home />} />
             <Route path="/contact" element={<Home />} />
           </Routes>
