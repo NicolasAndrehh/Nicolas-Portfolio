@@ -4,9 +4,23 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
 import resume from '../../downloads/resume.pdf';
+import javascriptLogo from '../../img/javascript-logo.png';
 import picture from '../../img/my-picture.webp';
+import railsLogo from '../../img/rails-logo.png';
+import reactLogo from '../../img/react-logo.png';
+import reduxLogo from '../../img/redux-logo.png';
+import sassLogo from '../../img/sass-logo.png';
 import './home.scss';
+
+const skills = [
+  { id: 0, name: 'JavaScript', logo: javascriptLogo },
+  { id: 1, name: 'React', logo: reactLogo },
+  { id: 2, name: 'Redux', logo: reduxLogo },
+  { id: 3, name: 'Sass', logo: sassLogo },
+  { id: 4, name: 'Ruby on Rails', logo: railsLogo },
+];
 
 const Home = () => (
   <section className="homepage-section">
@@ -16,7 +30,7 @@ const Home = () => (
           Hi, I&apos;m
           <br />
           <span className="name">
-            Nicolas Andres Olaya
+            Nicolas Andrés Olaya
           </span>
         </h2>
         <p className="subtitle">Full-stack developer</p>
@@ -42,6 +56,32 @@ const Home = () => (
         </div>
       </div>
       <img src={picture} alt="Nicolas Olaya" className="nicolas-picture" />
+    </div>
+    <hr className="separator" />
+    <div className="introduction">
+      <h2>Let me introduce myself</h2>
+      <p>
+        I&apos;m a Full-stack Developer from Colombia, and I have a true passion for
+        creating engaging and responsive UI designs that captivate users.
+        With a keen eye for aesthetics and functionality,
+        I take pride in crafting seamless user experiences that leave a lasting impact
+      </p>
+      <p>
+        I enjoy working with [
+        {' '}
+        {skills.map((skill, index) => (
+          <React.Fragment key={skill.id}>
+            {index > 0 && index < skills.length && ', '}
+            <img src={skill.logo} alt={skill.name} className="skill-logo" />
+          </React.Fragment>
+        ))}
+        ] to build exceptional web applications.
+      </p>
+      <p>
+        My passion for continuous learning drives me to deliver cutting-edge solutions and create
+        intuitive digital experiences that leave a lasting impact.
+        Let&apos;s collaborate and bring your ideas to life with exceptional web development.
+      </p>
     </div>
   </section>
 );
