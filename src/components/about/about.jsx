@@ -254,7 +254,7 @@ const About = () => (
               </div>
             </div>
           </div>
-          <a href={senaDegree} className="download-certificate sena" download="Nicolas sena certificate">
+          <a href={senaDegree} className="download-certificate sena" download="Nicolas sena degree">
             <FontAwesomeIcon icon={faFile} className="icon" />
           </a>
         </div>
