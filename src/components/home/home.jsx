@@ -49,7 +49,7 @@ const Home = () => (
             <a href="https://wellfound.com/u/nicolas-andres-olaya-gamba">
               <FontAwesomeIcon icon={faAngellist} className="icon" />
             </a>
-            <a href="mailto:nicolasolaya@gmail.com">
+            <a href="mailto:nicolasolaya22@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} className="icon" />
             </a>
           </div>
