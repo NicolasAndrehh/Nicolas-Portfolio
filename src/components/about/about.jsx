@@ -150,7 +150,7 @@ const About = () => (
           <img src={rappiLogo} alt="Rappi company logo" className="company-logo" />
           <div className="card-header">
             <h4>Back-end Developer</h4>
-            <p>
+            <p className="experience-description">
               During my internship at Rappi as a Back End Developer,
               I focused on designing and implementing RESTful APIs using Spring Boot.
               I was responsible for managing HTTP requests and responses, as well as effectively
@@ -178,7 +178,7 @@ const About = () => (
             </div>
           </div>
           <div className="card-footer">
-            <p>
+            <p className="location">
               <img src={locationIcon} alt="Location icon" />
               Colombia, Remote
             </p>
