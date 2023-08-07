@@ -1,95 +1,95 @@
 @use "../../variables";
 
 .projects-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: #fff;
 
-    .projects-container {
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 22rem;
+      height: 32rem;
+      gap: 2rem;
+      padding: 0.5rem;
+      border: 3px solid variables.$color-primary;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px variables.$color-primary;
+      transition: all 0.25s ease-in-out;
+
+      .project-image {
         display: flex;
-        flex-wrap: wrap;
+        height: 13rem;
+
+        img {
+          width: 100%;
+          border-radius: 0.25rem;
+        }
+      }
+
+      .project-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        gap: 1rem;
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+          text-align: center;
+        }
+      }
+
+      .project-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         gap: 2rem;
 
-        .project-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 22rem;
-            height: 32rem;
-            gap: 2rem;
-            padding: 0.5rem;
-            border: 3px solid variables.$color-primary;
-            border-radius: 0.5rem;
-            box-shadow: 0 0 10px variables.$color-primary;
-            transition: all 0.25s ease-in-out;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 3rem;
+          gap: 0.5rem;
+          padding: 0.5rem;
+          border-radius: 0.25rem;
+          background-color: variables.$color-primary;
+          color: #fff;
+          font-size: 1.25rem;
+          font-weight: 600;
+          text-decoration: none;
+          border: 2px solid variables.$color-primary;
+          transition: all 0.25s ease-in-out;
 
-            .project-image {
-                display: flex;
-                height: 13rem;
+          &:hover {
+            background: none;
+          }
 
-                img {
-                    width: 100%;
-                    border-radius: 0.25rem;
-                }
-            }
-
-            .project-info {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 1rem;
-
-                h3 {
-                    font-size: 1.5rem;
-                }
-
-                p {
-                    font-size: 1.1rem;
-                    text-align: center;
-                }
-            }
-
-            .project-actions {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 2rem;
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100%;
-                    height: 3rem;
-                    gap: 0.5rem;
-                    padding: 0.5rem;
-                    border-radius: 0.25rem;
-                    background-color: variables.$color-primary;
-                    color: #fff;
-                    font-size: 1.25rem;
-                    font-weight: 600;
-                    text-decoration: none;
-                    border: 2px solid variables.$color-primary;
-                    transition: all 0.25s ease-in-out;
-
-                    &:hover {
-                        background: none;
-                    }
-
-                    svg {
-                        font-size: 1.75rem;
-                    }
-                }
-            }
-
-            &:hover {
-                transform: scale(1.05);
-                box-shadow: 0 0 15px 5px variables.$color-primary;
-            }
+          svg {
+            font-size: 1.75rem;
+          }
         }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px 5px variables.$color-primary;
+      }
     }
+  }
 }
