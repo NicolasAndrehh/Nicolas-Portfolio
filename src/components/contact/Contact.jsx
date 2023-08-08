@@ -38,6 +38,7 @@ const Contact = () => (
         nicolasolaya22@gmail.com
       </a>
     </div>
+    <hr className="separator display-mobile" />
     <div className="image-container">
       <img src={githubPicture} alt="Github profile pic" />
       <div className="image-text">Thank you for exploring my portfolio!</div>
