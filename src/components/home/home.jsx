@@ -25,10 +25,12 @@ const skills = [
 const Home = () => (
   <section className="homepage-section">
     <div className="homepage-content">
+      <img src={picture} alt="Nicolas Olaya" className="nicolas-picture display-mobile" />
       <div className="intro-text">
         <h2 className="title">
           Hi, I&apos;m
-          <br />
+          {' '}
+          <br className="display-desktop" />
           <span className="name">
             Nicolas Andrés Olaya
           </span>
@@ -55,7 +57,7 @@ const Home = () => (
           </div>
         </div>
       </div>
-      <img src={picture} alt="Nicolas Olaya" className="nicolas-picture" />
+      <img src={picture} alt="Nicolas Olaya" className="nicolas-picture display-desktop" />
     </div>
     <hr className="separator" />
     <div className="introduction">
