@@ -47,9 +47,7 @@
       transform: translateY(0);
       opacity: 1;
     }
-
   }
-
 
   .nav-links {
     display: flex;
@@ -141,6 +139,15 @@
         width: 100%;
         gap: 1rem;
 
+        .active {
+          background-color: variables.$color-primary;
+          color: #fff;
+
+          .icon {
+            color: #fff;
+          }
+        }
+
         .nav-item {
           width: 100%;
 
@@ -155,15 +162,6 @@
                 color: #fff;
               }
             }
-          }
-        }
-
-        .active {
-          background-color: variables.$color-primary;
-          color: #fff;
-
-          .icon {
-            color: #fff;
           }
         }
       }
