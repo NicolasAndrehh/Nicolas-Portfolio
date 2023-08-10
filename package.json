@@ -1,5 +1,6 @@
 {
   "name": "nicolas-portfolio",
+  "homepage": "https://github.com/NicolasAndrehh/Nicolas-Portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,6 +25,8 @@
   },
   "scripts": {
     "start": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "serve": "vite preview",
     "fix": "npx eslint \"**/*.{js,jsx}\" --fix && npx stylelint \"**/*.{css,scss}\" --fix"

@@ -182,7 +182,9 @@ const About = () => (
               <img src={locationIcon} alt="Location icon" />
               Colombia, Remote
             </p>
-            <p>26 Jul 2022 - 24 Jan 2023</p>
+            <p className="date">
+              Jul 2022 - Jan 2023
+            </p>
           </div>
         </div>
       </div>
