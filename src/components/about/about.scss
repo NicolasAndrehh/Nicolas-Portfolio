@@ -30,7 +30,7 @@
 
   p {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 1.5;
     width: 60%;
   }
@@ -45,7 +45,7 @@
 
     li {
       font-size: 1.2rem;
-      font-weight: 500;
+      font-weight: 300;
       margin-bottom: 1rem;
     }
   }
@@ -83,11 +83,6 @@
 
       .icon {
         width: 35%;
-      }
-
-      p {
-        font-size: 1.25rem;
-        font-weight: 500;
       }
 
       &:hover {
@@ -156,7 +151,7 @@
         ul {
           list-style: inside circle;
           font-size: 1.25vw;
-          font-weight: 500;
+          font-weight: 300;
           padding-top: 8%;
 
           li {
@@ -197,7 +192,7 @@
       border: 3px solid variables.$color-primary;
       box-shadow: 0 0 10px variables.$color-primary;
       border-radius: 0.5rem;
-      padding: 2rem;
+      padding: 1.5rem;
       width: 100%;
       max-width: 60rem;
 
@@ -214,7 +209,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: 1rem;
 
         h4 {
           font-size: 2.5rem;
@@ -225,7 +220,7 @@
 
         .experience-description {
           font-size: 1rem;
-          font-weight: 400;
+          font-weight: 300;
         }
       }
 
@@ -248,7 +243,7 @@
           ul {
             list-style: inside circle;
             font-size: 1rem;
-            font-weight: 400;
+            font-weight: 300;
             padding: 1rem 0.5rem;
             width: 80%;
           }
@@ -263,7 +258,7 @@
 
           p {
             font-size: 1rem;
-            font-weight: 400;
+            font-weight: 300;
             width: 80%;
           }
         }
@@ -356,11 +351,6 @@
             font-weight: 700;
           }
 
-          p {
-            font-size: 1rem;
-            font-weight: 400;
-          }
-
           .end-date {
             font-size: 1.15rem;
             font-weight: 900;
@@ -374,6 +364,7 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 2rem;
+        font-weight: 300;
       }
     }
 

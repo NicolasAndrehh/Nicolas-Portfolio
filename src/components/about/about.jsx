@@ -55,13 +55,19 @@ const About = () => (
 
       <h4>Some interesting things about me:</h4>
       <ul>
-        <li>I love workout, you could even say that I&apos;m a gymrat</li>
-        <li>I enjoy watching all kind of anime</li>
-        <li>I&apos;m 20 years old</li>
         <li>
-          <span className="strong">Spanish</span>
+          I take great pleasure in upholding a healthy lifestyle and regularly hitting the gym.
+        </li>
+        <li>
+          Anime totally captures my interest, and I really enjoy checking
+          out a diverse range of genres it has to offer.
+        </li>
+        <li>At the age of 20, I&apos;m embarking on a journey filled with learning and growth.</li>
+        <li>
+          My native language is
           {' '}
-          is my native language, and I have a solid upper-intermediate level of English
+          <span className="strong">Spanish</span>
+          , and I&apos;ve also honed my English skills to a solid upper-intermediate level.
         </li>
       </ul>
 

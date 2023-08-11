@@ -11,7 +11,7 @@
   width: 100%;
   position: fixed;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   padding: 1rem 4rem;
   background-color: #000;
@@ -19,12 +19,11 @@
 
   .header-group {
     flex: 1;
+    display: flex;
   }
 
-  h1 {
-    color: #fff;
-    font-size: 1.5rem;
-    flex: 1;
+  .personal-logo {
+    height: 1.75rem;
   }
 
   .hamburger {

@@ -7,6 +7,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import personalLogo from '../../img/personal-logo.png';
 import './header.scss';
 
 const Header = () => {
@@ -40,7 +41,7 @@ const Header = () => {
   return (
     <header className={scrolled ? 'header scrolled' : 'header'}>
       <div className="header-group">
-        <h1>Welcome!</h1>
+        <img src={personalLogo} alt="Personal logo" className="personal-logo" />
 
         <div className="hamburger" onClick={toggleMobileNav} onKeyUp={toggleMobileNav} role="button" tabIndex={0}>
           <div className="bar" />

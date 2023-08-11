@@ -32,7 +32,7 @@ const Home = () => (
           {' '}
           <br className="display-desktop" />
           <span className="name">
-            Nicolas Andrés Olaya
+            Nicolás Andrés Olaya
           </span>
         </h2>
         <p className="subtitle">Full-stack developer</p>
