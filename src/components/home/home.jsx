@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import resume from '../../downloads/resume.pdf';
 import javascriptLogo from '../../img/javascript-logo.png';
-import picture from '../../img/my-picture.webp';
+import programmer from '../../img/programmer.svg';
 import railsLogo from '../../img/rails-logo.png';
 import reactLogo from '../../img/react-logo.png';
 import reduxLogo from '../../img/redux-logo.png';
@@ -25,7 +25,7 @@ const skills = [
 const Home = () => (
   <section className="homepage-section">
     <div className="homepage-content">
-      <img src={picture} alt="Nicolas Olaya" className="nicolas-picture display-mobile" />
+      <img src={programmer} alt="Nicolas Olaya" className="programmer-vector display-mobile" />
       <div className="intro-text">
         <h2 className="title">
           Hi, I&apos;m
@@ -57,7 +57,7 @@ const Home = () => (
           </div>
         </div>
       </div>
-      <img src={picture} alt="Nicolas Olaya" className="nicolas-picture display-desktop" />
+      <img src={programmer} alt="Nicolas Olaya" className="programmer-vector display-desktop" />
     </div>
     <hr className="separator" />
     <div className="introduction">

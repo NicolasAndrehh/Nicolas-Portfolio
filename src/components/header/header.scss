@@ -1,8 +1,13 @@
 @use '../../variables';
 
+@font-face {
+  font-family: 'JujutsuKaisen';
+  src: url('../../fonts/JujutsuKaisen.ttf') format('truetype');
+}
+
 .scrolled {
   border-bottom: 1px solid #2e2e2e;
-  background: rgba(0, 0, 0, 0.5) !important;
+  background: #7d122475 !important;
   backdrop-filter: blur(10px);
   z-index: 1;
 }
@@ -11,19 +16,21 @@
   width: 100%;
   position: fixed;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   padding: 1rem 4rem;
-  background-color: #000;
+  border-radius: 0.25rem;
+  background: none;
   transition: border-bottom 0.1s ease-in-out;
 
   .header-group {
-    flex: 1;
     display: flex;
   }
 
-  .personal-logo {
-    height: 1.75rem;
+  .logo {
+    font-family: 'JujutsuKaisen', sans-serif;
+    font-size: 1.75rem;
+    color: #fff;
   }
 
   .hamburger {
@@ -40,7 +47,6 @@
   }
 
   .navbar {
-    flex: 1;
 
     &.mobile-nav-open {
       transform: translateY(0);
@@ -50,23 +56,16 @@
 
   .nav-links {
     display: flex;
-    justify-content: space-around;
+    gap: 1rem;
 
     .nav-item {
       display: flex;
       align-items: center;
 
-      .icon {
-        color: #fff;
-        font-size: 1rem;
-      }
-
       .active {
+        background-color: #FCF7F8;
+        border-radius: 0.25rem;
         color: variables.$color-primary;
-
-        .icon {
-          color: variables.$color-primary;
-        }
       }
 
       a {
@@ -74,10 +73,10 @@
         align-items: center;
         position: relative;
         gap: 0.5rem;
-        color: #fff;
+        color: #dadada;
         padding: 0.5rem;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: bold;
         letter-spacing: 1px;
         transition: all 0.3s ease-in-out;
@@ -100,12 +99,91 @@
           &::after {
             width: 100%;
           }
+        }
+      }
+    }
+  }
 
-          .icon {
-            color: variables.$color-primary;
+  .options {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .switch {
+      display: block;
+      --width-of-switch: 3rem;
+      --height-of-switch: 1.75rem;
+      --size-of-icon: 1.1rem;
+      --slider-offset: 0.3rem;
+      position: relative;
+      width: var(--width-of-switch);
+      height: var(--height-of-switch);
+
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f4f4f5;
+        transition: 0.4s;
+        border-radius: 2rem;
+
+        &:before {
+          position: absolute;
+          content: "";
+          height: var(--size-of-icon);
+          width: var(--size-of-icon);
+          border-radius: 1.25rem;
+          left: var(--slider-offset);
+          top: 50%;
+          transform: translateY(-50%);
+          background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+          transition: 0.4s;
+        }
+      }
+
+      &.checked {
+        .slider {
+          background-color: #303136;
+
+          &:before {
+            left: calc(100% - (var(--size-of-icon) + var(--slider-offset)));
+            background: #303136;
+            box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
           }
         }
       }
+    }
+  }
+
+  .languages {
+    display: flex;
+    gap: 0.25rem;
+
+    .language-button {
+      font-family: 'Roboto', sans-serif;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s all ease-in-out;
+    }
+
+    .active-language {
+      background-color: #fff;
+      border-radius: 0.25rem;
+      color: variables.$color-primary;
     }
   }
 }
@@ -141,10 +219,6 @@
         .active {
           background-color: variables.$color-primary;
           color: #fff;
-
-          .icon {
-            color: #fff;
-          }
         }
 
         .nav-item {
@@ -156,10 +230,6 @@
 
             &:hover {
               color: #fff;
-
-              .icon {
-                color: #fff;
-              }
             }
           }
         }

@@ -1,18 +1,12 @@
-import {
-  faBriefcase,
-  faEnvelope,
-  faHouse,
-  faUser,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import personalLogo from '../../img/personal-logo.png';
 import './header.scss';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const [language, setLanguage] = useState('ES');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +35,7 @@ const Header = () => {
   return (
     <header className={scrolled ? 'header scrolled' : 'header'}>
       <div className="header-group">
-        <img src={personalLogo} alt="Personal logo" className="personal-logo" />
+        <h2 className="logo">Nicolas Olaya</h2>
 
         <div className="hamburger" onClick={toggleMobileNav} onKeyUp={toggleMobileNav} role="button" tabIndex={0}>
           <div className="bar" />
@@ -53,30 +47,36 @@ const Header = () => {
         <ul className="nav-links">
           <li className="nav-item">
             <NavLink to="/" end onClick={closeNav}>
-              <FontAwesomeIcon icon={faHouse} className="icon" />
               Home
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink to="/about" onClick={closeNav}>
-              <FontAwesomeIcon icon={faUser} className="icon" />
               About
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink to="/projects" onClick={closeNav}>
-              <FontAwesomeIcon icon={faBriefcase} className="icon" />
               Projects
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink to="/contact" onClick={closeNav}>
-              <FontAwesomeIcon icon={faEnvelope} className="icon" />
               Contact
             </NavLink>
           </li>
         </ul>
       </nav>
+      <div className="options">
+        <div className={`switch ${darkMode ? 'checked' : ''}`} onClick={() => setDarkMode(!darkMode)} onKeyDown={() => setDarkMode(!darkMode)} role="button" tabIndex={0}>
+          <input type="checkbox" />
+          <span className="slider" />
+        </div>
+        <div className="languages">
+          <button type="button" className={`language-button ${language === 'ES' && 'active-language'}`} onClick={() => setLanguage('ES')}>Español</button>
+          <button type="button" className={`language-button ${language === 'EN' && 'active-language'}`} onClick={() => setLanguage('EN')}>English</button>
+        </div>
+      </div>
     </header>
   );
 };
