@@ -38,7 +38,7 @@ const skills = [
 ];
 
 const About = () => (
-  <div className="about-page">
+  <div id="about" className="about-page">
     <section className="about-section">
       <h2 className="title">About me.</h2>
 

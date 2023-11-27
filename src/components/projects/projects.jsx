@@ -81,8 +81,9 @@ const projects = [
 const projectsInOrder = projects.reverse();
 
 const Projects = () => (
-  <section className="projects-section">
-    <h2 className="title">My Recent Works</h2>
+  <section id="projects" className="projects-section">
+    <h2 className="title">My Recent Projects</h2>
+    <p className="subtitle">Here are a few of the things I&apos;ve been working on lately.</p>
     <div className="projects-container">
       {projectsInOrder.map((project) => (
         <div className="project-card" key={project.id}>

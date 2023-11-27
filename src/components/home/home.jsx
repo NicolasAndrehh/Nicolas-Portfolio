@@ -7,20 +7,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import resume from '../../downloads/resume.pdf';
 import Itadori from '../../img/itadori.png';
-import javascriptLogo from '../../img/javascript-logo.png';
-import railsLogo from '../../img/rails-logo.png';
-import reactLogo from '../../img/react-logo.png';
-import reduxLogo from '../../img/redux-logo.png';
-import sassLogo from '../../img/sass-logo.png';
+// import javascriptLogo from '../../img/javascript-logo.png';
+// import railsLogo from '../../img/rails-logo.png';
+// import reactLogo from '../../img/react-logo.png';
+// import reduxLogo from '../../img/redux-logo.png';
+// import sassLogo from '../../img/sass-logo.png';
 import './home.scss';
 
-const skills = [
-  { id: 0, name: 'JavaScript', logo: javascriptLogo },
-  { id: 1, name: 'React', logo: reactLogo },
-  { id: 2, name: 'Redux', logo: reduxLogo },
-  { id: 3, name: 'Sass', logo: sassLogo },
-  { id: 4, name: 'Ruby on Rails', logo: railsLogo },
-];
+// const skills = [
+//   { id: 0, name: 'JavaScript', logo: javascriptLogo },
+//   { id: 1, name: 'React', logo: reactLogo },
+//   { id: 2, name: 'Redux', logo: reduxLogo },
+//   { id: 3, name: 'Sass', logo: sassLogo },
+//   { id: 4, name: 'Ruby on Rails', logo: railsLogo },
+// ];
 
 const Home = () => (
   <section id="home" className="homepage-section">
@@ -60,8 +60,8 @@ const Home = () => (
       </div>
       <img src={Itadori} alt="Yuji itadori" className="itadori-img display-desktop" />
     </div>
-    <hr className="separator" />
-    <div className="introduction">
+    {/* <hr className="separator" /> */}
+    {/* <div className="introduction">
       <h2>Let me introduce myself</h2>
       <p>
         I&apos;m a Full-stack Developer from Colombia, and I have a true passion for
@@ -85,7 +85,7 @@ const Home = () => (
         intuitive digital experiences that leave a lasting impact.
         Let&apos;s collaborate and bring your ideas to life with exceptional web development.
       </p>
-    </div>
+    </div> */}
   </section>
 );
 

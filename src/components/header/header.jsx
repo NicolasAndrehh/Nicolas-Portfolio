@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from '../../redux/themeSlice';
 import './header.scss';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState('ES');
+  const [active, setActive] = useState(false);
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,18 +27,29 @@ const Header = () => {
     };
   }, []);
 
-  const closeNav = () => {
+  const handleNavigation = (activeLink) => {
     setMobileNavOpen(false);
+    setActive(activeLink);
   };
 
   const toggleMobileNav = () => {
     setMobileNavOpen(!mobileNavOpen);
   };
 
+  const handleToggleTheme = () => {
+    dispatch(toggleTheme());
+  };
+
   return (
     <header className={scrolled ? 'header scrolled' : 'header'}>
       <div className="header-group">
-        <h2 className="logo">Nicolas Olaya</h2>
+        <h2 className={`logo ${isDarkMode ? 'dark-theme-logo' : 'light-theme-logo'}`}>
+          {'<'}
+          {' '}
+          Nicolas Olaya
+          {' '}
+          {'/>'}
+        </h2>
 
         <div className="hamburger" onClick={toggleMobileNav} onKeyUp={toggleMobileNav} role="button" tabIndex={0}>
           <div className="bar" />
@@ -46,35 +60,35 @@ const Header = () => {
       <nav className={`navbar ${mobileNavOpen ? 'mobile-nav-open' : ''}`}>
         <ul className="nav-links">
           <li className="nav-item">
-            <NavLink to="/" end onClick={closeNav}>
+            <a href="#home" className={`${isDarkMode ? 'dark-theme-link' : 'light-theme-link'} ${active === 'home' && 'active'}`} onClick={() => handleNavigation('home')}>
               Home
-            </NavLink>
+            </a>
           </li>
           <li className="nav-item">
-            <NavLink to="/about" onClick={closeNav}>
+            <a href="#about" className={`${isDarkMode ? 'dark-theme-link' : 'light-theme-link'} ${active === 'about' && 'active'}`} onClick={() => handleNavigation('about')}>
               About
-            </NavLink>
+            </a>
           </li>
           <li className="nav-item">
-            <NavLink to="/projects" onClick={closeNav}>
+            <a href="#projects" className={`${isDarkMode ? 'dark-theme-link' : 'light-theme-link'} ${active === 'projects' && 'active'}`} onClick={() => handleNavigation('projects')}>
               Projects
-            </NavLink>
+            </a>
           </li>
           <li className="nav-item">
-            <NavLink to="/contact" onClick={closeNav}>
+            <a href="#contact" className={`${isDarkMode ? 'dark-theme-link' : 'light-theme-link'} ${active === 'contact' && 'active'}`} onClick={() => handleNavigation('contact')}>
               Contact
-            </NavLink>
+            </a>
           </li>
         </ul>
       </nav>
       <div className="options">
-        <div className={`switch ${darkMode ? 'checked' : ''}`} onClick={() => setDarkMode(!darkMode)} onKeyDown={() => setDarkMode(!darkMode)} role="button" tabIndex={0}>
+        <div className={`switch ${isDarkMode ? 'checked' : ''}`} onClick={() => handleToggleTheme()} onKeyDown={() => handleToggleTheme()} role="button" tabIndex={0}>
           <input type="checkbox" />
           <span className="slider" />
         </div>
         <div className="languages">
-          <button type="button" className={`language-button ${language === 'ES' && 'active-language'}`} onClick={() => setLanguage('ES')}>Español</button>
-          <button type="button" className={`language-button ${language === 'EN' && 'active-language'}`} onClick={() => setLanguage('EN')}>English</button>
+          <button type="button" className={`language-button ${language === 'ES' && 'active-language'} ${isDarkMode ? 'dark-theme-button' : 'light-theme-button'}`} onClick={() => setLanguage('ES')}>Español</button>
+          <button type="button" className={`language-button ${language === 'EN' && 'active-language'} ${isDarkMode ? 'dark-theme-button' : 'light-theme-button'}`} onClick={() => setLanguage('EN')}>English</button>
         </div>
       </div>
     </header>

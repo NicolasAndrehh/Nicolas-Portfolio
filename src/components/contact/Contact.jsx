@@ -7,7 +7,7 @@ import githubPicture from '../../img/shikimori.webp';
 import './contact.scss';
 
 const Contact = () => (
-  <section className="contact-section">
+  <section id="contact" className="contact-section">
     <div className="contact-group">
       <div className="contact-info">
         <h2 className="title">Contact.</h2>

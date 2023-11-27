@@ -4,15 +4,22 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+.light-theme {
+  background-color: #fff;
+}
+
+.dark-theme {
   background-color: #000;
 }
 
 main {
-  padding: 6rem 4rem;
+  padding: 4rem 4rem;
 }
 
 .separator {
-  width: 80vw;
+  width: 100%;
   border: 1px solid variables.$color-primary;
   box-shadow: 0 0 10px 2px variables.$color-primary;
 }

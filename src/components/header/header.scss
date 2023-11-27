@@ -6,8 +6,7 @@
 }
 
 .scrolled {
-  border-bottom: 1px solid #2e2e2e;
-  background: #7d122475 !important;
+  background: #66666675 !important;
   backdrop-filter: blur(10px);
   z-index: 1;
 }
@@ -19,7 +18,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 4rem;
-  border-radius: 0.25rem;
   background: none;
   transition: border-bottom 0.1s ease-in-out;
 
@@ -30,6 +28,13 @@
   .logo {
     font-family: 'JujutsuKaisen', sans-serif;
     font-size: 1.75rem;
+  }
+
+  .light-theme-logo {
+    color: #000;
+  }
+
+  .dark-theme-logo {
     color: #fff;
   }
 
@@ -63,9 +68,17 @@
       align-items: center;
 
       .active {
-        background-color: #FCF7F8;
+        background-color: variables.$color-primary;
         border-radius: 0.25rem;
-        color: variables.$color-primary;
+        color: #fff !important;
+      }
+
+      .dark-theme-link {
+        color: #fff;
+      }
+
+      .light-theme-link {
+        color: #000;
       }
 
       a {
@@ -73,7 +86,6 @@
         align-items: center;
         position: relative;
         gap: 0.5rem;
-        color: #dadada;
         padding: 0.5rem;
         text-decoration: none;
         font-size: 1rem;
@@ -94,7 +106,6 @@
         }
 
         &:hover {
-          color: variables.$color-primary;
 
           &::after {
             width: 100%;
@@ -172,7 +183,6 @@
       font-family: 'Roboto', sans-serif;
       background: none;
       border: none;
-      color: #fff;
       font-size: 1rem;
       padding: 0.5rem;
       cursor: pointer;
@@ -180,10 +190,18 @@
       transition: 0.2s all ease-in-out;
     }
 
+    .dark-theme-button {
+      color: #fff;
+    }
+
+    .light-theme-button {
+      color: #000;
+    }
+
     .active-language {
-      background-color: #fff;
+      background-color: variables.$color-primary;
       border-radius: 0.25rem;
-      color: variables.$color-primary;
+      color: #fff;
     }
   }
 }

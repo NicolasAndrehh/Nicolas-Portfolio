@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import {
-  Route, Routes, useLocation,
+  useLocation,
 } from 'react-router-dom';
 import './App.scss';
 import About from './components/about/about';
@@ -10,6 +11,7 @@ import Home from './components/home/home';
 import Projects from './components/projects/projects';
 
 function App() {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -17,17 +19,16 @@ function App() {
   }, [pathname]);
 
   return (
-    <div className="App">
+    <div className={`App ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
 
       <Header />
 
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <Home />
+        <hr className="separator" />
+        <Projects />
+        <About />
+        <Contact />
       </main>
 
     </div>
