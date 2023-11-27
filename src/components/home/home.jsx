@@ -1,13 +1,13 @@
 import {
   faAngellist, faGithub,
-  faLinkedin,
+  faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import resume from '../../downloads/resume.pdf';
+import Itadori from '../../img/itadori.png';
 import javascriptLogo from '../../img/javascript-logo.png';
-import programmer from '../../img/programmer.svg';
 import railsLogo from '../../img/rails-logo.png';
 import reactLogo from '../../img/react-logo.png';
 import reduxLogo from '../../img/redux-logo.png';
@@ -23,27 +23,24 @@ const skills = [
 ];
 
 const Home = () => (
-  <section className="homepage-section">
+  <section id="home" className="homepage-section">
     <div className="homepage-content">
-      <img src={programmer} alt="Nicolas Olaya" className="programmer-vector display-mobile" />
+      <img src={Itadori} alt="Yuji itadori" className="itadori-img display-mobile" />
       <div className="intro-text">
         <h2 className="title">
-          Hi, I&apos;m
-          {' '}
-          <br className="display-desktop" />
-          <span className="name">
-            Nicolás Andrés Olaya
-          </span>
+          I&apos;m a Full-Stack
+          <br />
+          Developer
         </h2>
-        <p className="subtitle">Full-stack developer</p>
+        <p className="subtitle">
+          I enjoy building web applications with
+          <span className="highlight"> React, Redux, and Ruby on Rails</span>
+        </p>
         <div className="group-socials">
-          <a href={resume} className="download-button" download="Nicolas-Olaya-CV">
-            Download CV
-            <FontAwesomeIcon icon={faDownload} className="icon" />
-          </a>
+          <p className="socials-text">Find me on</p>
           <div className="socials">
             <a href="https://www.linkedin.com/in/nicolas-olaya/">
-              <FontAwesomeIcon icon={faLinkedin} className="icon" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
             </a>
             <a href="https://github.com/NicolasAndrehh">
               <FontAwesomeIcon icon={faGithub} className="icon" />
@@ -56,8 +53,12 @@ const Home = () => (
             </a>
           </div>
         </div>
+        <a href={resume} className="download-button" download="Nicolas-Olaya-CV">
+          Download CV
+          <FontAwesomeIcon icon={faDownload} className="icon" />
+        </a>
       </div>
-      <img src={programmer} alt="Nicolas Olaya" className="programmer-vector display-desktop" />
+      <img src={Itadori} alt="Yuji itadori" className="itadori-img display-desktop" />
     </div>
     <hr className="separator" />
     <div className="introduction">
