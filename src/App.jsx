@@ -19,7 +19,7 @@ function App() {
   }, [pathname]);
 
   return (
-    <div className={`App ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
+    <div className={`app ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
 
       <Header />
 
@@ -27,6 +27,7 @@ function App() {
         <Home />
         <hr className="separator" />
         <Projects />
+        <hr className="separator" />
         <About />
         <Contact />
       </main>

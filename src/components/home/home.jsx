@@ -28,9 +28,9 @@ const Home = () => (
       <img src={Itadori} alt="Yuji itadori" className="itadori-img display-mobile" />
       <div className="intro-text">
         <h2 className="title">
-          I&apos;m a Full-Stack
+          Full-Stack
           <br />
-          Developer
+          Web Developer
         </h2>
         <p className="subtitle">
           I enjoy building web applications with

@@ -2,6 +2,9 @@
 
 .itadori-img {
   max-width: 30rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .display-mobile {
@@ -21,6 +24,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    position: relative;
     text-align: center;
     border-radius: 2rem;
     width: 100%;
@@ -32,7 +36,7 @@
       text-align: left;
       gap: 2.5rem;
       height: 100%;
-      max-width: 100%;
+      max-width: 60%;
 
       .title {
         font-size: 5rem;
@@ -145,15 +149,9 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .homepage-section {
-    .homepage-content {
-      padding: 4rem 2rem;
-    }
-
-    .introduction {
-      padding: 4rem 2rem;
-    }
+@media (max-width: 1000px) {
+  main {
+    width: 100%;
   }
 }
 
