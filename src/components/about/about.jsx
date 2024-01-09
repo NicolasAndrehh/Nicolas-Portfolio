@@ -14,7 +14,6 @@ import reactLogo from '../../img/react-logo.png';
 import reduxLogo from '../../img/redux-logo.png';
 import rubyLogo from '../../img/ruby-logo.png';
 import senaLogo from '../../img/sena-logo.jpg';
-import othersIcon from '../../img/tools-icon.png';
 import zeroTwo from '../../img/zero-two.png';
 import './about.scss';
 
@@ -161,70 +160,8 @@ const About = () => (
         <img src={zeroTwo} alt="Sakura Chiyo" />
       </div>
     </section>
-    <hr className="separator" />
     <section className="skills-section">
-      <h3 className="title">My skills</h3>
-
-      <div className="skills-container">
-        <div className="stack-card">
-          <div className="card-header">
-            <img src={reactLogo} alt="React logo" className="stack-img" />
-            <h5>Front-end Stack</h5>
-          </div>
-          <div className="card-details">
-            <div className="decoration-tag">
-              <p>{'<ul>'}</p>
-              <div className="tag-delimiter" />
-              <p>{'</ul>'}</p>
-            </div>
-            <ul>
-              <li>HTML</li>
-              <li>CSS [Sass]</li>
-              <li>JavaScript</li>
-              <li>React [ViteJS]</li>
-              <li>Redux</li>
-            </ul>
-          </div>
-        </div>
-        <div className="stack-card">
-          <div className="card-header">
-            <img src={railsLogo} alt="Rails logo" className="stack-img" />
-            <h5>Back-end Stack</h5>
-          </div>
-          <div className="card-details">
-            <div className="decoration-tag">
-              <p>{'<ul>'}</p>
-              <div className="tag-delimiter" />
-              <p>{'</ul>'}</p>
-            </div>
-            <ul>
-              <li>Ruby</li>
-              <li>Ruby on Rails</li>
-              <li>PHP</li>
-              <li>Laravel</li>
-              <li>MySQL</li>
-              <li>PostgreSQL</li>
-            </ul>
-          </div>
-        </div>
-        <div className="stack-card">
-          <div className="card-header">
-            <img src={othersIcon} alt="Tools icon" className="stack-img" />
-            <h5>Others</h5>
-          </div>
-          <div className="card-details">
-            <div className="decoration-tag">
-              <p>{'<ul>'}</p>
-              <div className="tag-delimiter" />
-              <p>{'</ul>'}</p>
-            </div>
-            <ul>
-              <li>Git</li>
-              <li>Postman</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <h3 className="title">Tech Stack</h3>
       <div className="icons-container">
         {skills.map((skill) => (
           <div className="icon-card" key={skill.name}>
