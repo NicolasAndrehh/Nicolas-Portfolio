@@ -4,10 +4,11 @@ import {
   useLocation,
 } from 'react-router-dom';
 import './App.scss';
-import About from './components/about/about';
-import Contact from './components/contact/contact';
-import Header from './components/header/header';
-import Home from './components/home/home';
+import About from './components/about/About';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import Home from './components/home/Home';
 import Projects from './components/projects/projects';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Contact />
       </main>
 
+      <Footer />
     </div>
   );
 }
