@@ -1,0 +1,596 @@
+@use '../../variables';
+
+.title {
+    font-size: 4rem;
+    color: variables.$color-primary;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.strong {
+    font-weight: 700;
+}
+
+.light-theme-about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: #000;
+        padding: 2rem 0rem;
+        width: 100%;
+
+        .about-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+
+            p {
+                font-size: 1.3rem;
+                line-height: 1.5;
+                font-weight: 300;
+                width: 50%;
+            }
+
+            img {
+                width: 20rem;
+                height: 32rem;
+                right: 3rem;
+                bottom: 0;
+                position: absolute;
+            }
+        }
+
+        .highlight {
+            font-weight: 700;
+        }
+    }
+
+    .skills-section {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 2rem;
+        padding-bottom: 2rem;
+
+        .title {
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        .icons-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 40rem;
+            gap: 1rem;
+
+            .icon-card {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 3px solid #000;
+                border-radius: 0.5rem;
+                background-color: #00000080;
+                width: 5rem;
+                height: 5rem;
+                transition: all 0.2s ease-in-out;
+
+                .icon {
+                    width: 3rem;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    border: 3px solid variables.$color-primary;
+                    background-color: #000000;
+                    box-shadow: 0 0 15px variables.$color-primary;
+                }
+            }
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 3px solid variables.$color-primary;
+            width: 100%;
+            height: 30vw;
+
+            .stack-card {
+                display: flex;
+                flex-direction: column;
+                border: 3px solid variables.$color-primary;
+                padding: 8%;
+                min-width: 33.3%;
+                min-height: 100%;
+                gap: 1.5rem;
+
+                .card-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 3rem;
+                    gap: 1rem;
+
+                    h5 {
+                        font-size: 2.25vw;
+                        font-weight: 700;
+                    }
+
+                    .stack-img {
+                        width: 4.5vw;
+                    }
+                }
+
+                .card-details {
+                    display: flex;
+                    height: 100%;
+
+                    .decoration-tag {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        p {
+                            color: #3a3a3a;
+                            font-size: 1.25vw;
+                            font-weight: 900;
+                        }
+
+                        .tag-delimiter {
+                            height: 100%;
+                            width: 3px;
+                            background-color: #3a3a3a;
+                        }
+                    }
+
+                    ul {
+                        list-style: inside circle;
+                        font-size: 1.25vw;
+                        font-weight: 300;
+                        padding-top: 8%;
+
+                        li {
+                            margin-bottom: 0.5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .experience-education-section {
+        display: flex;
+        flex-direction: column;
+        color: #000;
+        width: 100%;
+        padding: 4rem 0;
+        gap: 0.5rem;
+
+        h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            .date {
+                position: absolute;
+                left: -3rem;
+                font-weight: 900;
+                font-size: 0.9rem;
+            }
+
+            .circle {
+                width: 1rem;
+                height: 1rem;
+                background-color: variables.$color-primary;
+                border-radius: 50%;
+                box-shadow: 0 0 16px 8px variables.$color-primary;
+            }
+
+            .line {
+                width: 2px;
+                height: 15rem;
+                margin-top: 10px;
+                border: 1px solid #000;
+            }
+
+            .line-professional {
+                width: 2px;
+                height: 15rem;
+                margin-top: 10px;
+                border: 1px solid variables.$color-primary;
+            }
+
+            .professional-highlight {
+                position: absolute;
+                left: -7rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 7rem;
+                padding: 0.6rem;
+                background-color: variables.$color-primary;
+                font-size: 0.85rem;
+                font-weight: bold;
+                color: #fff;
+                border-left: 2px solid #000;
+                border-radius: 0 0.25rem 0.25rem 0;
+            }
+        }
+
+        .experience-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 2rem;
+
+            .experience-card {
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                border-radius: 0.5rem;
+                width: 50%;
+                max-width: 60rem;
+
+                .company-logo {
+                    width: 3rem;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+                .card-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    h4 {
+                        font-size: 1.75rem;
+                        font-weight: 700;
+                    }
+
+                    .date {
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        color: #9c9c9c;
+                    }
+
+                    .experience-description {
+                        font-size: 0.9rem;
+                        font-weight: 400;
+
+                        .highlight {
+                            color: #ff5e00;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        .education-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 2rem;
+
+            .education-card {
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                width: 50%;
+                gap: 0.5rem;
+
+                h4 {
+                    font-size: 1.75rem;
+                    font-weight: 700;
+                    max-width: 80%;
+                }
+
+                .date {
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    color: #9c9c9c;
+                }
+
+                .education-description {
+                    font-size: 0.9rem;
+                    font-weight: 400;
+
+                    .highlight {
+                        color: #ff5e00;
+                        font-weight: 700;
+                    }
+                }
+
+                .education-logo {
+                    width: 3rem;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+// Media query
+@media (max-width: 1050px) {
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: 3px solid variables.$color-primary;
+        width: 100%;
+        height: 30vw;
+
+        .stack-card {
+            padding: 6% !important;
+
+            .card-details {
+                .decoration-tag {
+                    p {
+                        font-size: 1.65vw !important;
+                    }
+                }
+
+                ul {
+                    font-size: 1.5vw !important;
+
+                    li {
+                        margin-bottom: 0.25vw !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        gap: 1.5rem;
+        margin-top: 2rem;
+
+        .title {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            width: 100%;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+        }
+
+        ul {
+            li {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .skills-section {
+        .title {
+            font-size: 3rem;
+        }
+
+        .icons-container {
+            .icon-card {
+                width: 8rem;
+                height: 5rem;
+
+                .icon {
+                    width: 3rem;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: none;
+            gap: 2rem;
+            height: 100%;
+
+            .stack-card {
+                width: 20rem;
+                min-height: 20rem;
+                padding: 1rem !important;
+
+                .card-header {
+                    h5 {
+                        font-size: 1.5rem;
+                    }
+
+                    .stack-img {
+                        width: 2.5rem;
+                    }
+                }
+
+                .card-details {
+                    .decoration-tag {
+                        height: 11rem;
+
+                        p {
+                            font-size: 1rem !important;
+                        }
+
+                        .tag-delimiter {
+                            width: 2px !important;
+                        }
+                    }
+
+                    ul {
+                        font-size: 1rem !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .experience-section {
+        margin-bottom: 4rem;
+
+        .title {
+            font-size: 3rem;
+        }
+
+        .experience-container {
+            .experience-card {
+                width: 100%;
+                padding: 1rem 1rem 4rem 1rem;
+
+                .company-logo {
+                    width: 8rem;
+                    bottom: -4rem;
+                }
+
+                .card-header {
+                    gap: 1rem;
+
+                    h4 {
+                        font-size: 1.5rem;
+                    }
+
+                    .experience-description {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .card-details {
+                    flex-direction: column;
+                    gap: 1rem;
+                    margin-top: 1rem;
+
+                    h5 {
+                        font-size: 1.25rem;
+                    }
+
+                    .responsabilities {
+                        width: 100%;
+
+                        h5 {
+                            text-align: center;
+                        }
+
+                        ul {
+                            font-size: 0.9rem;
+                            padding: 0.25rem;
+                            width: 100%;
+                        }
+                    }
+
+                    .abilities-learned {
+                        width: 100%;
+                        align-items: center;
+                        text-align: left;
+
+                        p {
+                            width: 100%;
+                            font-size: 0.9rem;
+                            padding: 0.25rem;
+                        }
+                    }
+                }
+
+                .card-footer {
+                    .location {
+                        font-size: 0.9rem;
+
+                        img {
+                            width: 1.5rem;
+                        }
+                    }
+
+                    .date {
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .education-section {
+        .title {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .education-container {
+            .education-card {
+                margin-left: 0;
+                min-height: 0;
+                padding: 5rem 1rem 1rem 1rem;
+                margin-top: 4rem;
+
+                .education-logo {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -4rem;
+                    width: 8rem;
+                }
+
+                .card-info {
+                    margin-left: 0;
+                    gap: 1rem;
+
+                    .card-header {
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+
+                        h4 {
+                            text-align: center;
+                            font-size: 1.5rem;
+                        }
+
+                        p {
+                            font-size: 0.9rem;
+                        }
+
+                        .end-date {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .education-skills {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .experience-card {
+        .card-footer {
+            flex-direction: column;
+            align-items: center !important;
+            gap: 1rem;
+            margin: 1rem 0 !important;
+        }
+    }
+}

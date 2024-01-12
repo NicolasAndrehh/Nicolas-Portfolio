@@ -11,254 +11,292 @@
   font-weight: 700;
 }
 
-.about-page {
+.dark-theme-about-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-}
 
-.about-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  color: #fff;
-  padding: 2rem 0rem;
-  width: 100%;
-
-  .about-group {
+  .about-section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    position: relative;
-
-    p {
-      font-size: 1.3rem;
-      line-height: 1.5;
-      font-weight: 300;
-      width: 50%;
-    }
-
-    img {
-      width: 20rem;
-      height: 32rem;
-      right: 3rem;
-      bottom: 0;
-      position: absolute;
-    }
-  }
-
-  .highlight {
-    font-weight: 700;
-  }
-}
-
-.skills-section {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 2rem;
-  padding-bottom: 2rem;
-
-  .title {
-    font-size: 3.5rem;
-    text-align: center;
-  }
-
-  .icons-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 40rem;
-    gap: 1rem;
-
-    .icon-card {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 3px solid #fff;
-      border-radius: 0.5rem;
-      background-color: #ffffff80;
-      width: 5rem;
-      height: 5rem;
-      transition: all 0.2s ease-in-out;
-
-      .icon {
-        width: 3rem;
-      }
-
-      &:hover {
-        transform: scale(1.1);
-        border: 3px solid variables.$color-primary;
-        background-color: #000000;
-        box-shadow: 0 0 15px variables.$color-primary;
-      }
-    }
-  }
-
-  .skills-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border: 3px solid variables.$color-primary;
+    color: #fff;
+    padding: 2rem 0rem;
     width: 100%;
-    height: 30vw;
 
-    .stack-card {
+    .about-group {
       display: flex;
       flex-direction: column;
-      border: 3px solid variables.$color-primary;
-      padding: 8%;
-      min-width: 33.3%;
-      min-height: 100%;
-      gap: 1.5rem;
+      gap: 2rem;
+      position: relative;
 
-      .card-header {
+      p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        font-weight: 300;
+        width: 50%;
+      }
+
+      img {
+        width: 20rem;
+        height: 32rem;
+        right: 3rem;
+        bottom: 0;
+        position: absolute;
+      }
+    }
+
+    .highlight {
+      font-weight: 700;
+    }
+  }
+
+  .skills-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    padding-bottom: 2rem;
+
+    .title {
+      font-size: 3.5rem;
+      text-align: center;
+    }
+
+    .icons-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 40rem;
+      gap: 1rem;
+
+      .icon-card {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 3rem;
-        gap: 1rem;
+        border: 3px solid #fff;
+        border-radius: 0.5rem;
+        background-color: #ffffff80;
+        width: 5rem;
+        height: 5rem;
+        transition: all 0.2s ease-in-out;
 
-        h5 {
-          font-size: 2.25vw;
-          font-weight: 700;
+        .icon {
+          width: 3rem;
         }
 
-        .stack-img {
-          width: 4.5vw;
-        }
-      }
-
-      .card-details {
-        display: flex;
-        height: 100%;
-
-        .decoration-tag {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-
-          p {
-            color: #3a3a3a;
-            font-size: 1.25vw;
-            font-weight: 900;
-          }
-
-          .tag-delimiter {
-            height: 100%;
-            width: 3px;
-            background-color: #3a3a3a;
-          }
-        }
-
-        ul {
-          list-style: inside circle;
-          font-size: 1.25vw;
-          font-weight: 300;
-          padding-top: 8%;
-
-          li {
-            margin-bottom: 0.5vw;
-          }
+        &:hover {
+          transform: scale(1.1);
+          border: 3px solid variables.$color-primary;
+          background-color: #000000;
+          box-shadow: 0 0 15px variables.$color-primary;
         }
       }
     }
-  }
-}
 
-.experience-education-section {
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  width: 100%;
-  padding: 4rem 0;
-  gap: 0.5rem;
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 3px solid variables.$color-primary;
+      width: 100%;
+      height: 30vw;
 
-  h3 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-
-    .date {
-      position: absolute;
-      left: -3rem;
-      font-weight: 900;
-      font-size: 0.9rem;
-    }
-
-    .circle {
-      width: 1rem;
-      height: 1rem;
-      background-color: variables.$color-primary;
-      border-radius: 50%;
-      box-shadow: 0 0 16px 8px variables.$color-primary;
-    }
-
-    .line {
-      width: 2px;
-      height: 15rem;
-      margin-top: 10px;
-      border: 1px solid #fff;
-    }
-
-    .line-professional {
-      width: 2px;
-      height: 15rem;
-      margin-top: 10px;
-      border: 1px solid variables.$color-primary;
-    }
-
-    .professional-highlight {
-      position: absolute;
-      left: -7rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 7rem;
-      padding: 0.6rem;
-      background-color: variables.$color-primary;
-      font-size: 0.85rem;
-      font-weight: bold;
-      border-left: 2px solid #fff;
-      border-radius: 0 0.25rem 0.25rem 0;
-    }
-  }
-
-  .experience-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 2rem;
-
-    .experience-card {
-      display: flex;
-      position: relative;
-      flex-direction: column;
-      border-radius: 0.5rem;
-      width: 50%;
-      max-width: 60rem;
-
-      .company-logo {
-        width: 3rem;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-
-      .card-info {
+      .stack-card {
         display: flex;
         flex-direction: column;
+        border: 3px solid variables.$color-primary;
+        padding: 8%;
+        min-width: 33.3%;
+        min-height: 100%;
+        gap: 1.5rem;
+
+        .card-header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 3rem;
+          gap: 1rem;
+
+          h5 {
+            font-size: 2.25vw;
+            font-weight: 700;
+          }
+
+          .stack-img {
+            width: 4.5vw;
+          }
+        }
+
+        .card-details {
+          display: flex;
+          height: 100%;
+
+          .decoration-tag {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+              color: #3a3a3a;
+              font-size: 1.25vw;
+              font-weight: 900;
+            }
+
+            .tag-delimiter {
+              height: 100%;
+              width: 3px;
+              background-color: #3a3a3a;
+            }
+          }
+
+          ul {
+            list-style: inside circle;
+            font-size: 1.25vw;
+            font-weight: 300;
+            padding-top: 8%;
+
+            li {
+              margin-bottom: 0.5vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .experience-education-section {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    padding: 4rem 0;
+    gap: 0.5rem;
+
+    h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      .date {
+        position: absolute;
+        left: -3rem;
+        font-weight: 900;
+        font-size: 0.9rem;
+      }
+
+      .circle {
+        width: 1rem;
+        height: 1rem;
+        background-color: variables.$color-primary;
+        border-radius: 50%;
+        box-shadow: 0 0 16px 8px variables.$color-primary;
+      }
+
+      .line {
+        width: 2px;
+        height: 15rem;
+        margin-top: 10px;
+        border: 1px solid #fff;
+      }
+
+      .line-professional {
+        width: 2px;
+        height: 15rem;
+        margin-top: 10px;
+        border: 1px solid variables.$color-primary;
+      }
+
+      .professional-highlight {
+        position: absolute;
+        left: -7rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 7rem;
+        padding: 0.6rem;
+        background-color: variables.$color-primary;
+        font-size: 0.85rem;
+        font-weight: bold;
+        border-left: 2px solid #fff;
+        border-radius: 0 0.25rem 0.25rem 0;
+      }
+    }
+
+    .experience-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 2rem;
+
+      .experience-card {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        border-radius: 0.5rem;
+        width: 50%;
+        max-width: 60rem;
+
+        .company-logo {
+          width: 3rem;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        .card-info {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          h4 {
+            font-size: 1.75rem;
+            font-weight: 700;
+          }
+
+          .date {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #9c9c9c;
+          }
+
+          .experience-description {
+            font-size: 0.9rem;
+            font-weight: 400;
+
+            .highlight {
+              color: #ff5e00;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+
+    .education-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 2rem;
+
+      .education-card {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 50%;
         gap: 0.5rem;
 
         h4 {
           font-size: 1.75rem;
           font-weight: 700;
+          max-width: 80%;
         }
 
         .date {
@@ -267,7 +305,7 @@
           color: #9c9c9c;
         }
 
-        .experience-description {
+        .education-description {
           font-size: 0.9rem;
           font-weight: 400;
 
@@ -276,52 +314,14 @@
             font-weight: 700;
           }
         }
-      }
-    }
-  }
 
-  .education-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 2rem;
-
-    .education-card {
-      display: flex;
-      position: relative;
-      flex-direction: column;
-      width: 50%;
-      gap: 0.5rem;
-
-      h4 {
-        font-size: 1.75rem;
-        font-weight: 700;
-        max-width: 80%;
-      }
-
-      .date {
-        font-size: 0.9rem;
-        font-weight: 500;
-        color: #9c9c9c;
-      }
-
-      .education-description {
-        font-size: 0.9rem;
-        font-weight: 400;
-
-        .highlight {
-          color: #ff5e00;
-          font-weight: 700;
+        .education-logo {
+          width: 3rem;
+          position: absolute;
+          right: 0;
+          top: 0;
+          border-radius: 0.5rem;
         }
-      }
-
-      .education-logo {
-        width: 3rem;
-        position: absolute;
-        right: 0;
-        top: 0;
-        border-radius: 0.5rem;
       }
     }
   }
