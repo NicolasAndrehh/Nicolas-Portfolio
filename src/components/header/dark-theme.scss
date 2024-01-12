@@ -5,13 +5,13 @@
   src: url('../../fonts/JujutsuKaisen.ttf') format('truetype');
 }
 
-.scrolled {
+.dark-theme-scrolled {
   background: #000000c7 !important;
   backdrop-filter: blur(10px);
   z-index: 1;
 }
 
-.header {
+.dark-theme-header {
   width: 1000px;
   position: fixed;
   display: flex;
@@ -28,13 +28,6 @@
   .logo {
     font-family: 'JujutsuKaisen', sans-serif;
     font-size: 1.75rem;
-  }
-
-  .light-theme-logo {
-    color: #000;
-  }
-
-  .dark-theme-logo {
     color: #fff;
   }
 
@@ -73,12 +66,8 @@
         color: #fff !important;
       }
 
-      .dark-theme-link {
+      .link {
         color: #fff;
-      }
-
-      .light-theme-link {
-        color: #000;
       }
 
       a {
@@ -190,12 +179,8 @@
       transition: 0.2s all ease-in-out;
     }
 
-    .dark-theme-button {
+    .button {
       color: #fff;
-    }
-
-    .light-theme-button {
-      color: #000;
     }
 
     .active-language {

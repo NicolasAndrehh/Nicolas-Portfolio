@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '../../redux/themeSlice';
-import './header.scss';
+import './dark-theme.scss';
+import './light-theme.scss';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -40,10 +41,23 @@ const Header = () => {
     dispatch(toggleTheme());
   };
 
+  let headerClassName = '';
+  if (isDarkMode) {
+    headerClassName += ' dark-theme-header';
+  } else {
+    headerClassName += ' light-theme-header';
+  }
+  if (scrolled && isDarkMode) {
+    headerClassName += ' dark-theme-scrolled';
+  } else if (scrolled && !isDarkMode) {
+    headerClassName += ' light-theme-scrolled';
+  }
+
   return (
-    <header className={scrolled ? 'header scrolled' : 'header'}>
+
+    <header className={headerClassName}>
       <div className="header-group">
-        <h2 className={`logo ${isDarkMode ? 'dark-theme-logo' : 'light-theme-logo'}`}>
+        <h2 className="logo">
           {'<'}
           {' '}
           Nicolas Olaya
@@ -60,22 +74,22 @@ const Header = () => {
       <nav className={`navbar ${mobileNavOpen ? 'mobile-nav-open' : ''}`}>
         <ul className="nav-links">
           <li className="nav-item">
-            <a href="#home" className={`${isDarkMode ? 'dark-theme-link' : 'light-theme-link'} ${active === 'home' && 'active'}`} onClick={() => handleNavigation('home')}>
+            <a href="#home" className={`link ${active === 'home' && 'active'}`} onClick={() => handleNavigation('home')}>
               Home
             </a>
           </li>
           <li className="nav-item">
-            <a href="#about" className={`${isDarkMode ? 'dark-theme-link' : 'light-theme-link'} ${active === 'about' && 'active'}`} onClick={() => handleNavigation('about')}>
+            <a href="#about" className={`link ${active === 'about' && 'active'}`} onClick={() => handleNavigation('about')}>
               About
             </a>
           </li>
           <li className="nav-item">
-            <a href="#projects" className={`${isDarkMode ? 'dark-theme-link' : 'light-theme-link'} ${active === 'projects' && 'active'}`} onClick={() => handleNavigation('projects')}>
+            <a href="#projects" className={`link ${active === 'projects' && 'active'}`} onClick={() => handleNavigation('projects')}>
               Projects
             </a>
           </li>
           <li className="nav-item">
-            <a href="#contact" className={`${isDarkMode ? 'dark-theme-link' : 'light-theme-link'} ${active === 'contact' && 'active'}`} onClick={() => handleNavigation('contact')}>
+            <a href="#contact" className={`link ${active === 'contact' && 'active'}`} onClick={() => handleNavigation('contact')}>
               Contact
             </a>
           </li>
@@ -87,8 +101,8 @@ const Header = () => {
           <span className="slider" />
         </div>
         <div className="languages">
-          <button type="button" className={`language-button ${language === 'ES' && 'active-language'} ${isDarkMode ? 'dark-theme-button' : 'light-theme-button'}`} onClick={() => setLanguage('ES')}>Español</button>
-          <button type="button" className={`language-button ${language === 'EN' && 'active-language'} ${isDarkMode ? 'dark-theme-button' : 'light-theme-button'}`} onClick={() => setLanguage('EN')}>English</button>
+          <button type="button" className={`language-button ${language === 'ES' && 'active-language'} button`} onClick={() => setLanguage('ES')}>Español</button>
+          <button type="button" className={`language-button ${language === 'EN' && 'active-language'} button`} onClick={() => setLanguage('EN')}>English</button>
         </div>
       </div>
     </header>
