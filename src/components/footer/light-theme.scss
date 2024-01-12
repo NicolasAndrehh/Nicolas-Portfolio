@@ -1,0 +1,33 @@
+.light-theme-footer {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 1000px;
+    padding: 1rem;
+    color: #000;
+
+    .socials {
+        display: flex;
+        gap: 1.5rem;
+        color: #000;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+    }
+
+    hr {
+        border: 1px solid #000;
+    }
+
+    .email {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+    }
+}
