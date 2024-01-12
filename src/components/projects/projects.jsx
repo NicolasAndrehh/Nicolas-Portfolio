@@ -2,6 +2,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import animeGenreBrowserSS from '../../img/projects-thumbnails/anime-genre-browser.png';
 import awesomeBooksSS from '../../img/projects-thumbnails/awesome-books.png';
 import leaderboardSS from '../../img/projects-thumbnails/leaderboard.png';
@@ -10,7 +11,8 @@ import railsBudgetSS from '../../img/projects-thumbnails/rails-budget.png';
 import rickAndMortySS from '../../img/projects-thumbnails/rick-and-morty-characters.png';
 import toDoListSS from '../../img/projects-thumbnails/to-do-list.png';
 import videogamesRentalSS from '../../img/projects-thumbnails/videogames-rental.png';
-import './projects.scss';
+import './dark-theme.scss';
+import './light-theme.scss';
 
 const projects = [
   {
@@ -92,6 +94,7 @@ const projectsInOrder = projects.reverse();
 const Projects = () => {
   const [itemsToShow, setItemsToShow] = useState(6);
   const [showAll, setShowAll] = useState(false);
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
 
   const handleShowAll = () => {
     if (showAll) {
@@ -104,7 +107,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className={isDarkMode ? 'dark-theme-projects-section' : 'light-theme-projects-section'}>
       <h2 className="title">My Recent Projects</h2>
       <p className="subtitle">Here are a few of the things I&apos;ve been working on lately.</p>
       <div className="projects-container">
