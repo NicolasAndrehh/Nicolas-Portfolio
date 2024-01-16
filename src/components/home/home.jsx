@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import resume from '../../downloads/resume.pdf';
-import Itadori from '../../img/itadori.png';
+import Itadori from '../../img/itadori.webp';
 import './dark-theme.scss';
 import './light-theme.scss';
 
@@ -16,6 +16,7 @@ const Home = () => {
 
   return (
     <section id="home" className={isDarkMode ? 'dark-theme-homepage-section' : 'light-theme-homepage-section'}>
+      <link rel="preload" href={Itadori} as="image" />
       <div className="homepage-content">
         <img src={Itadori} alt="Yuji itadori" className="itadori-img display-mobile" />
         <div className="intro-text">
