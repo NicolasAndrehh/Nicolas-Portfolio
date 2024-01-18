@@ -5,6 +5,7 @@ import {
 import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import resume from '../../downloads/resume.pdf';
 import Itadori from '../../img/itadori.webp';
@@ -13,6 +14,7 @@ import './light-theme.scss';
 
 const Home = () => {
   const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+  const { t } = useTranslation();
 
   return (
     <section id="home" className={isDarkMode ? 'dark-theme-homepage-section' : 'light-theme-homepage-section'}>
@@ -21,16 +23,16 @@ const Home = () => {
         <img src={Itadori} alt="Yuji itadori" className="itadori-img display-mobile" />
         <div className="intro-text">
           <h2 className="title">
-            Full-Stack
+            {t('home.title1')}
             <br />
-            Web Developer
+            {t('home.title2')}
           </h2>
           <p className="subtitle">
-            I enjoy building web applications with
-            <span className="highlight"> React, Redux, and Ruby on Rails</span>
+            {t('home.subtitle.normalText')}
+            <span className="highlight">{t('home.subtitle.highlight')}</span>
           </p>
           <div className="group-socials">
-            <p className="socials-text">Find me on</p>
+            <p className="socials-text">{t('home.socialsText')}</p>
             <div className="socials">
               <a href="https://www.linkedin.com/in/nicolas-olaya/">
                 <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
@@ -47,7 +49,7 @@ const Home = () => {
             </div>
           </div>
           <a href={resume} className="download-button" download="Nicolas-Olaya-CV">
-            Download CV
+            {t('home.downloadText')}
             <FontAwesomeIcon icon={faDownload} className="icon" />
           </a>
         </div>
