@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '../../redux/themeSlice';
 import './dark-theme.scss';
@@ -7,9 +8,10 @@ import './light-theme.scss';
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const [language, setLanguage] = useState('ES');
   const [active, setActive] = useState(false);
   const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -39,6 +41,10 @@ const Header = () => {
 
   const handleToggleTheme = () => {
     dispatch(toggleTheme());
+  };
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
   let headerClassName = '';
@@ -75,22 +81,22 @@ const Header = () => {
         <ul className="nav-links">
           <li className="nav-item">
             <a href="#home" className={`link ${active === 'home' && 'active'}`} onClick={() => handleNavigation('home')}>
-              Home
+              {t('header.home')}
             </a>
           </li>
           <li className="nav-item">
             <a href="#about" className={`link ${active === 'about' && 'active'}`} onClick={() => handleNavigation('about')}>
-              About
+              {t('header.about')}
             </a>
           </li>
           <li className="nav-item">
             <a href="#projects" className={`link ${active === 'projects' && 'active'}`} onClick={() => handleNavigation('projects')}>
-              Projects
+              {t('header.projects')}
             </a>
           </li>
           <li className="nav-item">
             <a href="#contact" className={`link ${active === 'contact' && 'active'}`} onClick={() => handleNavigation('contact')}>
-              Contact
+              {t('header.contact')}
             </a>
           </li>
         </ul>
@@ -101,8 +107,8 @@ const Header = () => {
           <span className="slider" />
         </div>
         <div className="languages">
-          <button type="button" className={`language-button ${language === 'ES' && 'active-language'} button`} onClick={() => setLanguage('ES')}>Español</button>
-          <button type="button" className={`language-button ${language === 'EN' && 'active-language'} button`} onClick={() => setLanguage('EN')}>English</button>
+          <button type="button" className={`language-button ${currentLanguage === 'es' && 'active-language'} button`} onClick={() => changeLanguage('es')}>Español</button>
+          <button type="button" className={`language-button ${currentLanguage === 'en' && 'active-language'} button`} onClick={() => changeLanguage('en')}>English</button>
         </div>
       </div>
     </header>
