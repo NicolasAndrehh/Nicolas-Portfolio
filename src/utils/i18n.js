@@ -101,6 +101,15 @@ i18n.use(initReactI18next).init({
             },
           },
         },
+        contact: {
+          title: 'Contact Me.',
+          form: {
+            name: 'Name',
+            email: 'Email',
+            message: 'Message',
+            submit: 'Send',
+          },
+        },
       },
     },
     es: {
@@ -198,6 +207,15 @@ i18n.use(initReactI18next).init({
                 6: 'experiencia de usuario.',
               },
             },
+          },
+        },
+        contact: {
+          title: 'Contáctame.',
+          form: {
+            name: 'Nombre',
+            email: 'Correo',
+            message: 'Mensaje',
+            submit: 'Enviar',
           },
         },
       },
