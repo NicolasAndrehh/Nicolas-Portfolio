@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import cssLogo from '../../img/css-logo.webp';
 import gitLogo from '../../img/git-logo.webp';
@@ -36,90 +37,95 @@ const skills = [
 
 const About = () => {
   const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+  const { t } = useTranslation();
 
   return (
     <div id="about" className={isDarkMode ? 'dark-theme-about-page' : 'light-theme-about-page'}>
       <section className="experience-education-section">
         <h3 className="title">
-          Experience and education
+          {t('about.experienceAndEducation.title')}
         </h3>
         <div className="education-container">
           <div className="timeline">
-            <span className="date">Now</span>
+            <span className="date">
+              {t('about.experienceAndEducation.microverse.timeline')}
+            </span>
             <span className="circle" />
             <hr className="line" />
           </div>
           <div className="education-card">
             <img src={microverseLogo} alt="Microverse logo" className="education-logo microverse-logo" />
-            <h4>Full-stack Web Development</h4>
-            <small className="date">Jan 2023 - Aug 2023</small>
+            <h4>
+              {t('about.experienceAndEducation.microverse.title')}
+            </h4>
+            <small className="date">
+              {t('about.experienceAndEducation.microverse.date')}
+            </small>
             <p className="education-description">
-              Accumulated over 1300 hours dedicated to mastering algorithms, data structures,
-              and full-stack development. Simultaneously, I crafted projects using Ruby, Rails,
-              JavaScript, React, and Redux. Gained expertise in remote pair programming through
-              GitHub, employing industry-standard git-flow and participating in daily standups for
-              seamless communication and collaboration with international remote developers.
+              {t('about.experienceAndEducation.microverse.description')}
             </p>
           </div>
         </div>
         <div className="experience-container">
           <div className="timeline">
-            <span className="date">2023</span>
+            <span className="date">
+              {t('about.experienceAndEducation.rappi.timeline')}
+            </span>
             <span className="circle" />
             <hr className="line-professional" />
-            <span className="professional-highlight">Professional Experience</span>
+            <span className="professional-highlight">
+              {t('about.experienceAndEducation.rappi.professionalHighlight')}
+            </span>
           </div>
           <div className="experience-card">
             <img src={rappiLogo} alt="Rappi company logo" className="company-logo" />
             <div className="card-info">
-              <h4>Back-end Developer</h4>
+              <h4>
+                {t('about.experienceAndEducation.rappi.title')}
+              </h4>
               <p className="date">
-                July 2022 - July 2023 (1 Year)
+                {t('about.experienceAndEducation.rappi.date')}
               </p>
               <p className="experience-description">
-                Collaborated with senior developers to design
-                and implement RESTful APIs using
-                {' '}
-                <span className="highlight">Spring Boot</span>
-                {' '}
-                and
-                {' '}
-                <span className="highlight">Kotlin</span>
-                . Notably,
-                I contributed to creating the
-                {' '}
-                authentication and authorization endpoint for the About Rappi page.
-                Managing HTTP
-                {' '}
-                <span className="highlight">requests / responses</span>
-                {' '}
-                and handling
-                {' '}
-                <span className="highlight">exceptions / errors</span>
-                {' '}
-                refined my backend development skills
-                and provided insights into maintaining a robust tech ecosystem at Rappi.
+                {t('about.experienceAndEducation.rappi.description.paragraphs.1')}
+                <span className="highlight">
+                  {t('about.experienceAndEducation.rappi.description.highlights.1')}
+                </span>
+                {t('about.experienceAndEducation.rappi.description.paragraphs.2')}
+                <span className="highlight">
+                  {t('about.experienceAndEducation.rappi.description.highlights.2')}
+                </span>
+                {t('about.experienceAndEducation.rappi.description.paragraphs.3')}
+                <span className="highlight">
+                  {t('about.experienceAndEducation.rappi.description.highlights.3')}
+                </span>
+                {t('about.experienceAndEducation.rappi.description.paragraphs.4')}
+                <span className="highlight">
+                  {t('about.experienceAndEducation.rappi.description.highlights.4')}
+                </span>
+                {t('about.experienceAndEducation.rappi.description.paragraphs.5')}
               </p>
             </div>
           </div>
         </div>
         <div className="education-container">
           <div className="timeline">
-            <span className="date">2022</span>
+            <span className="date">
+              {t('about.experienceAndEducation.sena.timeline')}
+            </span>
             <span className="circle" />
             <hr className="line" />
           </div>
           <div className="education-card">
             <img src={senaLogo} alt="Sena logo" className="education-logo sena-logo" />
-            <h4>Software Analysis and Development</h4>
-            <small className="date">Jan 2021 - June 2022</small>
+            <h4>
+              {t('about.experienceAndEducation.sena.title')}
+            </h4>
+            <small className="date">
+              {t('about.experienceAndEducation.sena.date')}
+            </small>
             <p className="education-description">
-              Introduced to programming here, I built a strong base for a software analyst
-              and developer role. This career involves mastering software application tasks
-              like analysis, design, development, and maintenance. Proficiency in programming
-              languages, collaboration, and crafting efficient solutions are crucial.
-              In today&apos;s tech-focused world, software analysis and development
-              offer substantial growth and innovation opportunities.
+              {t('about.experienceAndEducation.sena.description')}
             </p>
           </div>
         </div>
@@ -129,38 +135,38 @@ const About = () => {
         <h2 className="title">About me.</h2>
         <div className="about-group">
           <p>
-            👋 Hey there! I&apos;m Nicolas Olaya, a Full Stack Web Developer with
-            {' '}
-            <span className="highlight">1 year of hands-on experience.</span>
+            {t('about.aboutMe.description.paragraphs.1')}
+            <span className="highlight">
+              {t('about.aboutMe.description.highlights.1')}
+            </span>
           </p>
           <p>
-            Specializing in
-            {' '}
-            <span className="highlight">React</span>
-            {' '}
-            for dynamic front-end experiences and
-            {' '}
-            <span className="highlight">Ruby on Rails </span>
-            {' '}
-            for
-            robust back-end solutions and proficient in
-            {' '}
-            <span className="highlight">SQL</span>
-            {' '}
-            for effective database management.
+            {t('about.aboutMe.description.paragraphs.2')}
+            <span className="highlight">
+              {t('about.aboutMe.description.highlights.2')}
+            </span>
+            {t('about.aboutMe.description.paragraphs.3')}
+            <span className="highlight">
+              {t('about.aboutMe.description.highlights.3')}
+            </span>
+            {t('about.aboutMe.description.paragraphs.4')}
+            <span className="highlight">
+              {t('about.aboutMe.description.highlights.4')}
+            </span>
+            {t('about.aboutMe.description.paragraphs.5')}
           </p>
           <p>
-            I&apos;ve had the privilege of contributing to diverse projects,
-            ensuring both
-            {' '}
-            <span className="highlight">functionality</span>
-            {' '}
-            and a great
-            {' '}
-            <span className="highlight">user experience.</span>
-            {' '}
-            Let&apos;s connect and explore how my skills can elevate your next
-            web development endeavor!
+            {t('about.aboutMe.description.paragraphs.6')}
+            <span className="highlight">
+              {t('about.aboutMe.description.highlights.5')}
+            </span>
+            {t('about.aboutMe.description.paragraphs.7')}
+            <span className="highlight">
+              {t('about.aboutMe.description.highlights.6')}
+            </span>
+          </p>
+          <p>
+            {t('about.aboutMe.description.paragraphs.8')}
           </p>
           <img src={zeroTwo} alt="Sakura Chiyo" />
         </div>

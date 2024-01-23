@@ -40,6 +40,67 @@ i18n.use(initReactI18next).init({
           seeLess: 'See less',
           seeMore: 'See more',
         },
+        about: {
+          experienceAndEducation: {
+            title: 'Experience & Education',
+            microverse: {
+              timeline: 'Now',
+              title: 'Full-Stack Web Development',
+              date: 'Jan 2023 - Aug 2023',
+              description: 'Accumulated over 1300 hours dedicated to mastering algorithms, data structures, and full-stack development. Simultaneously, I crafted projects using Ruby, Rails, JavaScript, React, and Redux. Gained expertise in remote pair programming through GitHub, employing industry-standard git-flow and participating in daily standups for seamless communication and collaboration with international remote developers.',
+            },
+            rappi: {
+              timeline: '2023',
+              professionalHighlight: 'Professional Experience',
+              title: 'Back-End Developer',
+              date: 'July 2022 - July 2023 (1 Year)',
+              description: {
+                paragraphs: {
+                  1: 'Collaborated with senior developers to design and implement RESTful APIs using ',
+                  2: ' and ',
+                  3: ' Notably, I contributed to creating the authentication and authorization endpoint for the \'About Rappi page\'. Managing HTTP ',
+                  4: ' and handling ',
+                  5: ' refined my backend development skills and provided insights into maintaining a robust tech ecosystem at Rappi.',
+                },
+                highlights: {
+                  1: 'Spring Boot',
+                  2: 'Kotlin.',
+                  3: 'requests / responses',
+                  4: 'excetions / errors',
+                },
+              },
+            },
+            sena: {
+              timeline: '2022',
+              title: 'Software Analysis and Development',
+              date: 'Jan 2021 - June 2022',
+              description: 'Introduced to programming here, I built a strong base for a software analyst and developer role. This career involves mastering software application tasks like analysis, design, development, and maintenance. Proficiency in programming languages, collaboration, and crafting efficient solutions are crucial. In today\'s tech-focused world, software analysis and development offer substantial growth and innovation opportunities.',
+            },
+          },
+          aboutMe: {
+            title: 'About Me',
+            description: {
+              paragraphs: {
+                1: '👋 Hey there! I\'m Nicolas Olaya, a Full Stack Web Developer with ',
+                2: 'Specialized in ',
+                3: ' for dynamic front-end experiences and ',
+                4: ' for robust back-end solutions and proficient in ',
+                5: ' for effective database management.',
+                6: 'I\'ve had the privilege of contributing to diverse projects, ensuring both ',
+                7: ' and a great ',
+                8: 'Let\'s connect and explore how my skills can elevate your next web development endeavor!',
+              },
+              highlights: {
+                1: '1 year of hands-on experience.',
+                2: 'React',
+                3: 'Ruby on Rails',
+                4: 'SQL',
+                5: 'functionality',
+                6: 'user experience.',
+              },
+            },
+          },
+        },
       },
     },
     es: {
@@ -77,6 +138,67 @@ i18n.use(initReactI18next).init({
           },
           seeLess: 'Ver menos',
           seeMore: 'Ver más',
+        },
+        about: {
+          experienceAndEducation: {
+            title: 'Experiencia y Educación',
+            microverse: {
+              timeline: 'Ahora',
+              title: 'Desarrollo Web Full-Stack',
+              date: 'Enero 2023 - Agosto 2023',
+              description: 'Acumulé más de 1300 horas dedicadas a dominar algoritmos, estructuras de datos y desarrollo full-stack. Al mismo tiempo, creé proyectos utilizando Ruby, Rails, JavaScript, React y Redux. Adquirí experiencia en programación en pareja remota a través de GitHub, empleando git-flow estándar de la industria y participando en reuniones diarias para una comunicación y colaboración perfectas con desarrolladores remotos internacionales.',
+            },
+            rappi: {
+              timeline: '2023',
+              professionalHighlight: 'Experiencia Profesional',
+              title: 'Desarrollador Back-End',
+              date: 'Julio 2022 - Julio 2023 (1 Año)',
+              description: {
+                paragraphs: {
+                  1: 'Colaboré con desarrolladores senior para diseñar e implementar APIs RESTful utilizando ',
+                  2: ' y ',
+                  3: ' Destacablemente, contribuí a crear el endpoint de autenticación y autorización para la página \'Acerca de Rappi\'. Manejar HTTP ',
+                  4: ' y manejar ',
+                  5: ' refinó mis habilidades de desarrollo backend y proporcionó información sobre cómo mantener un ecosistema tecnológico sólido en Rappi.',
+                },
+                highlights: {
+                  1: 'Spring Boot',
+                  2: 'Kotlin.',
+                  3: 'solicitudes / respuestas',
+                  4: 'excepciones / errores',
+                },
+              },
+            },
+            sena: {
+              timeline: '2022',
+              title: 'Análisis y Desarrollo de Software',
+              date: 'Enero 2021 - Junio 2022',
+              description: 'Introducido a la programación aquí, construí una base sólida para un rol de analista y desarrollador de software. Esta carrera implica dominar tareas de aplicaciones de software como análisis, diseño, desarrollo y mantenimiento. La competencia en lenguajes de programación, la colaboración y la elaboración de soluciones eficientes son cruciales. En el mundo actual centrado en la tecnología, el análisis y desarrollo de software ofrecen oportunidades sustanciales de crecimiento e innovación.',
+            },
+          },
+          aboutMe: {
+            title: 'Sobre mí',
+            description: {
+              paragraphs: {
+                1: '👋 ¡Hola! Soy Nicolas Olaya, un desarrollador web Full Stack con ',
+                2: 'Especializado en ',
+                3: ' para experiencias front-end dinámicas, ',
+                4: ' para soluciones back-end robustas y experto en ',
+                5: ' para una gestión eficaz de bases de datos.',
+                6: 'He tenido el privilegio de contribuir a diversos proyectos, asegurando tanto ',
+                7: ' como una gran ',
+                8: '¡Conectemos y exploremos cómo mis habilidades pueden elevar tu próximo emprendimiento de desarrollo web!',
+              },
+              highlights: {
+                1: '1 año de experiencia práctica.',
+                2: 'React',
+                3: 'Ruby on Rails',
+                4: 'SQL',
+                5: 'funcionalidad',
+                6: 'experiencia de usuario.',
+              },
+            },
+          },
         },
       },
     },
