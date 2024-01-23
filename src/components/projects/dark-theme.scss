@@ -164,35 +164,3 @@
     }
   }
 }
-
-@media (max-width: 425px) {
-  .title {
-    font-size: 3rem;
-  }
-
-  .project-card {
-    width: 20rem !important;
-    height: 30rem !important;
-    gap: 1rem !important;
-
-    .project-info {
-      h3 {
-        font-size: 1.25rem !important;
-      }
-
-      p {
-        font-size: 1rem !important;
-      }
-    }
-
-    .project-actions {
-      a {
-        font-size: 1.15rem !important;
-
-        svg {
-          font-size: 1.5rem !important;
-        }
-      }
-    }
-  }
-}

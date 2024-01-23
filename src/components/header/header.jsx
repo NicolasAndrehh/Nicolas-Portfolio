@@ -101,7 +101,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <div className="options">
+      <div className={`options ${mobileNavOpen ? 'mobile-nav-open' : ''}`}>
         <div className={`switch ${isDarkMode ? 'checked' : ''}`} onClick={() => handleToggleTheme()} onKeyDown={() => handleToggleTheme()} role="button" tabIndex={0}>
           <input type="checkbox" />
           <span className="slider" />
