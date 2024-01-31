@@ -1,14 +1,15 @@
+/* eslint-disable import/extensions */
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import {
   useLocation,
 } from 'react-router-dom';
 import './App.scss';
-import About from './components/about/About';
+import About from './components/about/About.jsx';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
-import Home from './components/home/Home';
+import Header from './components/header/Header.jsx';
+import Home from './components/home/Home.jsx';
 import Projects from './components/projects/projects';
 
 function App() {
