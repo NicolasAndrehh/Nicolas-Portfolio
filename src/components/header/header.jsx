@@ -71,7 +71,7 @@ const Header = () => {
           {'/>'}
         </h2>
 
-        <div className="hamburger" onClick={toggleMobileNav} onKeyUp={toggleMobileNav} role="button" tabIndex={0}>
+        <div className="hamburger" onClick={toggleMobileNav} onKeyUp={toggleMobileNav} role="button" tabIndex={0} aria-labelledby="js_1">
           <div className="bar" />
           <div className="bar" />
           <div className="bar" />
@@ -102,7 +102,7 @@ const Header = () => {
         </ul>
       </nav>
       <div className={`options ${mobileNavOpen ? 'mobile-nav-open' : ''}`}>
-        <div className={`switch ${isDarkMode ? 'checked' : ''}`} onClick={() => handleToggleTheme()} onKeyDown={() => handleToggleTheme()} role="button" tabIndex={0}>
+        <div className={`switch ${isDarkMode ? 'checked' : ''}`} onClick={() => handleToggleTheme()} onKeyDown={() => handleToggleTheme()} role="button" tabIndex={0} aria-labelledby="js_2">
           <input type="checkbox" />
           <span className="slider" />
         </div>

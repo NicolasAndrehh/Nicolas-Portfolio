@@ -35,16 +35,16 @@ const Home = () => {
           <div className="group-socials">
             <p className="socials-text">{t('home.socialsText')}</p>
             <div className="socials">
-              <a href="https://www.linkedin.com/in/nicolas-olaya/">
+              <a href="https://www.linkedin.com/in/nicolas-olaya/" aria-labelledby="js_1">
                 <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
               </a>
-              <a href="https://github.com/NicolasAndrehh">
+              <a href="https://github.com/NicolasAndrehh" aria-labelledby="js_1">
                 <FontAwesomeIcon icon={faGithub} className="icon" />
               </a>
-              <a href="https://wellfound.com/u/nicolas-andres-olaya-gamba">
+              <a href="https://wellfound.com/u/nicolas-andres-olaya-gamba" aria-labelledby="js_1">
                 <FontAwesomeIcon icon={faAngellist} className="icon" />
               </a>
-              <a href="mailto:nicolasolaya22@gmail.com">
+              <a href="mailto:nicolasolaya22@gmail.com" aria-labelledby="js_1">
                 <FontAwesomeIcon icon={faEnvelope} className="icon" />
               </a>
             </div>
