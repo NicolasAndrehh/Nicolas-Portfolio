@@ -1,229 +1,229 @@
 @use '../../variables';
 
 .itadori-img {
-    max-width: 30rem;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+  max-width: 30rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .display-mobile {
-    display: none;
+  display: none;
 }
 
 .light-theme-homepage-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 0;
+
+  .homepage-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    padding: 4rem 0;
+    position: relative;
+    text-align: center;
+    border-radius: 2rem;
+    width: 100%;
 
-    .homepage-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-        position: relative;
-        text-align: center;
-        border-radius: 2rem;
-        width: 100%;
+    .intro-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      gap: 2.5rem;
+      height: 100%;
+      max-width: 60%;
 
-        .intro-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: left;
-            gap: 2.5rem;
-            height: 100%;
-            max-width: 60%;
+      .title {
+        font-size: 5rem;
+        font-weight: 900;
+        color: variables.$color-primary;
+        text-transform: none;
+      }
 
-            .title {
-                font-size: 5rem;
-                font-weight: 900;
-                color: variables.$color-primary;
-                text-transform: none;
-            }
+      .subtitle {
+        font-size: 2rem;
+        width: 70%;
+        color: #000;
 
-            .subtitle {
-                font-size: 2rem;
-                width: 70%;
-                color: #000;
-
-                .highlight {
-                    color: variables.$color-primary;
-                }
-            }
-
-            .group-socials {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-
-                .socials-text {
-                    font-size: 1.25rem;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                    color: #b1b1b1;
-                }
-
-                .socials {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    gap: 1rem;
-                    width: 10rem;
-
-                    a {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border: 2px solid variables.$color-primary;
-                        padding: 0.75rem;
-                        border-radius: 50%;
-                        width: 3rem;
-                        height: 3rem;
-                        transition: all 0.2s ease-in-out;
-
-                        &:hover {
-                            background-color: variables.$color-primary;
-
-                            .icon {
-                                color: #fff;
-                            }
-                        }
-                    }
-
-                    .icon {
-                        color: variables.$color-primary;
-                        font-size: 1.5rem;
-                    }
-                }
-            }
-
-            .download-button {
-                width: 70%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 0.5rem;
-                text-align: center;
-                text-decoration: none;
-                background-color: variables.$color-primary;
-                color: #fff;
-                border: 2px solid variables.$color-primary;
-                padding: 1rem;
-                border-radius: 0.5rem;
-                font-size: 1.2rem;
-                font-weight: 600;
-                transition: all 0.2s ease-in-out;
-
-                &:hover {
-                    background: none;
-                    color: variables.$color-primary;
-                }
-            }
+        .highlight {
+          color: variables.$color-primary;
         }
-    }
+      }
 
-    .introduction {
+      .group-socials {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 1rem;
 
-        h2 {
-            font-size: 2.75rem;
-            word-spacing: 5px;
-            font-weight: 900;
-            color: variables.$color-primary;
-            text-transform: uppercase;
+        .socials-text {
+          font-size: 1.25rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #b1b1b1;
         }
 
-        p {
-            font-size: 1.5rem;
-            color: #fff;
-            line-height: 1.5;
-            word-spacing: 2px;
+        .socials {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1rem;
+          width: 10rem;
 
-            .skill-logo {
-                width: 2.5rem;
-                margin-right: 0.5rem;
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid variables.$color-primary;
+            padding: 0.75rem;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              background-color: variables.$color-primary;
+
+              .icon {
+                color: #fff;
+              }
             }
+          }
+
+          .icon {
+            color: variables.$color-primary;
+            font-size: 1.5rem;
+          }
         }
+      }
+
+      .download-button {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        text-align: center;
+        text-decoration: none;
+        background-color: variables.$color-primary;
+        color: #fff;
+        border: 2px solid variables.$color-primary;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background: none;
+          color: variables.$color-primary;
+        }
+      }
     }
+  }
+
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    h2 {
+      font-size: 2.75rem;
+      word-spacing: 5px;
+      font-weight: 900;
+      color: variables.$color-primary;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #fff;
+      line-height: 1.5;
+      word-spacing: 2px;
+
+      .skill-logo {
+        width: 2.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 1000px) {
-    main {
-        width: 100%;
-    }
+  main {
+    width: 100%;
+  }
 }
 
 @media (max-width: 750px) {
-    .light-theme-homepage-section {
-        .homepage-content {
-            flex-direction: column;
+  .light-theme-homepage-section {
+    .homepage-content {
+      flex-direction: column;
 
-            .itadori-img {
-                position: unset;
-                width: 20rem;
-            }
+      .itadori-img {
+        position: unset;
+        width: 20rem;
+      }
 
-            .intro-text {
-                text-align: center;
-                align-items: center;
-                max-width: 100%;
-                width: 100%;
+      .intro-text {
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
 
-                .title {
-                    font-size: 4rem;
-                }
-
-                .subtitle {
-                    font-size: 1.5rem;
-                    width: 80%;
-                }
-
-                .group-socials {
-                    .socials {
-                        width: 100%;
-                    }
-                }
-
-                .download-button {
-                    width: 100%;
-                }
-            }
+        .title {
+          font-size: 4rem;
         }
 
-        .introduction {
-            h2 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1.25rem;
-            }
+        .subtitle {
+          font-size: 1.5rem;
+          width: 80%;
         }
+
+        .group-socials {
+          .socials {
+            width: 100%;
+          }
+        }
+
+        .download-button {
+          width: 100%;
+        }
+      }
     }
+
+    .introduction {
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 425px) {
-    .light-theme-homepage-section {
-        .itadori-img {
-            width: 15rem !important;
-        }
-
-        .homepage-content {
-            .intro-text {
-                .title {
-                    font-size: 3rem;
-                }
-
-                .subtitle {
-                    font-size: 1.25rem;
-                }
-            }
-        }
+  .light-theme-homepage-section {
+    .itadori-img {
+      width: 15rem !important;
     }
+
+    .homepage-content {
+      .intro-text {
+        .title {
+          font-size: 3rem;
+        }
+
+        .subtitle {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
 }
