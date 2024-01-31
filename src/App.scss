@@ -1,3 +1,39 @@
+@use 'variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light-theme {
+  background-color: #fff;
+}
+
+.dark-theme {
+  background-color: #000;
+}
+
+main {
+  width: 1000px;
+  padding: 4rem 2rem;
+}
+
+.separator {
+  width: 100%;
+  border: 1px solid variables.$color-primary;
+  box-shadow: 0 0 10px 2px variables.$color-primary;
+}
+
+@media (max-width: 425px) {
+  main {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
 }
