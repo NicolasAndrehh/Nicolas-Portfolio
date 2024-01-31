@@ -158,3 +158,72 @@
         width: 100%;
     }
 }
+
+@media (max-width: 750px) {
+    .light-theme-homepage-section {
+        .homepage-content {
+            flex-direction: column;
+
+            .itadori-img {
+                position: unset;
+                width: 20rem;
+            }
+
+            .intro-text {
+                text-align: center;
+                align-items: center;
+                max-width: 100%;
+                width: 100%;
+
+                .title {
+                    font-size: 4rem;
+                }
+
+                .subtitle {
+                    font-size: 1.5rem;
+                    width: 80%;
+                }
+
+                .group-socials {
+                    .socials {
+                        width: 100%;
+                    }
+                }
+
+                .download-button {
+                    width: 100%;
+                }
+            }
+        }
+
+        .introduction {
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .light-theme-homepage-section {
+        .itadori-img {
+            width: 15rem !important;
+        }
+
+        .homepage-content {
+            .intro-text {
+                .title {
+                    font-size: 3rem;
+                }
+
+                .subtitle {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}

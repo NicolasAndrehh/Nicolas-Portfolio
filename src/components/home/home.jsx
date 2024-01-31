@@ -27,6 +27,7 @@ const Home = () => {
             <br />
             {t('home.title2')}
           </h2>
+          <img src={Itadori} alt="Yuji itadori" className="itadori-img display-desktop" />
           <p className="subtitle">
             {t('home.subtitle.normalText')}
             <span className="highlight">{t('home.subtitle.highlight')}</span>
@@ -53,7 +54,6 @@ const Home = () => {
             <FontAwesomeIcon icon={faDownload} className="icon" />
           </a>
         </div>
-        <img src={Itadori} alt="Yuji itadori" className="itadori-img display-desktop" />
       </div>
     </section>
   );

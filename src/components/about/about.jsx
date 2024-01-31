@@ -73,7 +73,7 @@ const About = () => {
             </span>
             <span className="circle" />
             <hr className="line-professional" />
-            <span className="professional-highlight">
+            <span className="professional-highlight desktop">
               {t('about.experienceAndEducation.rappi.professionalHighlight')}
             </span>
           </div>
@@ -86,6 +86,9 @@ const About = () => {
               <p className="date">
                 {t('about.experienceAndEducation.rappi.date')}
               </p>
+              <span className="professional-highlight mobile">
+                {t('about.experienceAndEducation.rappi.professionalHighlight')}
+              </span>
               <p className="experience-description">
                 {t('about.experienceAndEducation.rappi.description.paragraphs.1')}
                 <span className="highlight">

@@ -30,3 +30,10 @@ main {
   border: 1px solid variables.$color-primary;
   box-shadow: 0 0 10px 2px variables.$color-primary;
 }
+
+@media (max-width: 425px) {
+  main {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}

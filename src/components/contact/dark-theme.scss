@@ -13,7 +13,8 @@
 
   .contact-form {
     color: #fff;
-    width: 35rem;
+    max-width: 35rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -76,6 +77,29 @@
       &:hover {
         background: none;
         color: variables.$color-primary;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .dark-theme-contact-section {
+    .contact-form {
+
+      .form-group {
+        label {
+          font-size: 1rem;
+        }
+
+        input,
+        textarea {
+          font-size: 1rem;
+          padding: 0.25rem;
+        }
+      }
+
+      .submit-btn {
+        font-size: 0.8rem;
       }
     }
   }
