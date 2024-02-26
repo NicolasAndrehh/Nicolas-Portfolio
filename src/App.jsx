@@ -1,9 +1,7 @@
 /* eslint-disable import/extensions */
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import {
-  useLocation,
-} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './App.scss';
 import About from './components/about/About.jsx';
 import Contact from './components/contact/Contact';
@@ -22,7 +20,6 @@ function App() {
 
   return (
     <div className={`app ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
-
       <Header />
 
       <main>

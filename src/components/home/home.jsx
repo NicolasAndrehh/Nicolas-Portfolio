@@ -7,14 +7,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import resume from '../../downloads/resume.pdf';
+import spanishResume from '../../downloads/Nicolas_Olaya_HdV.pdf';
+import englishResume from '../../downloads/Nicolas_Olaya_Resume.pdf';
 import Itadori from '../../img/itadori.webp';
 import './dark-theme.scss';
 import './light-theme.scss';
 
 const Home = () => {
   const isDarkMode = useSelector((state) => state.theme.isDarkMode);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   return (
     <section id="home" className={isDarkMode ? 'dark-theme-homepage-section' : 'light-theme-homepage-section'}>
@@ -49,10 +51,17 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <a href={resume} className="download-button" download="Nicolas-Olaya-CV">
-            {t('home.downloadText')}
-            <FontAwesomeIcon icon={faDownload} className="icon" />
-          </a>
+          {currentLanguage === 'en' ? (
+            <a href={englishResume} className="download-button" download="Nicolas-Olaya-Resume">
+              {t('home.downloadText')}
+              <FontAwesomeIcon icon={faDownload} className="icon" />
+            </a>
+          ) : (
+            <a href={spanishResume} className="download-button" download="Nicolas-Olaya-HdV">
+              {t('home.downloadText')}
+              <FontAwesomeIcon icon={faDownload} className="icon" />
+            </a>
+          )}
         </div>
       </div>
     </section>
